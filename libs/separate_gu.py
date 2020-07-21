@@ -1,5 +1,9 @@
 import re
 
+'''
+address를 넘기면 성남시분당구로 되어 있는 부분을 성남시 분당구로 분리해줌
+ex) separate_gu('경기도 성남시 분당구서현동 263번지')
+'''
 def separate_gu(address):
     res = re.search('성남시[가-힣]{2,4}구',address)
     if res != None:
